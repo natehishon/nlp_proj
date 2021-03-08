@@ -22,7 +22,7 @@ class ResourceOne(Resource):
 
     def get(self, resource_id):
         timestamp = datetime.utcnow().isoformat()
-        return {'timestamp': timestamp}
+        return "Server Ping!"
 
     def post(self, resource_id):
         json_payload = request.json
