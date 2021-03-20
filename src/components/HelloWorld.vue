@@ -24,9 +24,6 @@ export default {
           this.error = error.message
         })
     }
-  },
-  mounted () {
-    this.fetchResource()
   }
 }
 </script>

@@ -10,6 +10,12 @@ from flask_restplus import Resource
 from .security import require_auth
 from . import api_rest
 
+# todo move me to a better place
+from app.helpers import modelHelpers
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 class SecureResource(Resource):
     """ Calls require_auth decorator on all requests """
@@ -25,6 +31,7 @@ class ResourceOne(Resource):
 
         model, tokenizer = modelHelpers.loadModelAndTokenizer()
 
+        """
         test_sentence = np.array(["I'm sorry, I totally should have done that!"])
 
         tokenizer.fit_on_texts(test_sentence)
@@ -34,7 +41,8 @@ class ResourceOne(Resource):
         # print(single_padder.shape)
         # print(model.predict(single_padder).shape)
         prediction = print(model.predict(single_padder))
-
+        """
+        prediction = "prediction"
         return prediction
 
     def post(self, resource_id):
