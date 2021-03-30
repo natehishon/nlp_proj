@@ -12,10 +12,10 @@ from . import api_rest
 
 # todo move me to a better place
 from app.helpers import modelHelpers
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+# import numpy as np
+# import tensorflow as tf
+# from tensorflow.keras.preprocessing.text import Tokenizer
+# from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 class SecureResource(Resource):
     """ Calls require_auth decorator on all requests """
