@@ -3,6 +3,7 @@
 module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
+  runtimeCompiler: true,
   // baseUrl: IS_PRODUCTION
   // ? 'http://cdn123.com'
   // : '/',

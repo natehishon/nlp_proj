@@ -2,7 +2,7 @@ import axios from 'axios'
 
 let $axios = axios.create({
   baseURL: '/api/',
-  timeout: 5000,
+  timeout: 15000,
   headers: { 'Content-Type': 'application/json' }
 })
 
@@ -25,6 +25,12 @@ export default {
 
   fetchResource () {
     return $axios.get(`resource/1`)
+      .then(response => response.data)
+  },
+  postResource (input) {
+    return $axios.post(`resource/1`, {
+      sentence: input
+    })
       .then(response => response.data)
   },
 
