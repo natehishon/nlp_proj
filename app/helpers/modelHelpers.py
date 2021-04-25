@@ -6,6 +6,7 @@ import pathlib
 
 
 def loadModelAndTokenizer():
+    # test
     document_path = os.getcwd() + "/app/models/"
     model = keras.models.load_model(document_path)
     with open(os.getcwd() + '/app/models/tokenizer.json') as f:
