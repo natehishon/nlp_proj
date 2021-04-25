@@ -12,10 +12,10 @@ from . import api_rest
 
 # todo move me to a better place
 from app.helpers import modelHelpers
-# import numpy as np
-# import tensorflow as tf
-# from tensorflow.keras.preprocessing.text import Tokenizer
-# from tensorflow.keras.preprocessing.sequence import pad_sequences
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 class SecureResource(Resource):
     """ Calls require_auth decorator on all requests """
@@ -31,18 +31,18 @@ class ResourceOne(Resource):
 
         model, tokenizer = modelHelpers.loadModelAndTokenizer()
 
-        """
         test_sentence = np.array(["I'm sorry, I totally should have done that!"])
+
+        max_length = 32
+        trunc_type = 'post'
+        padding_type = 'post'
 
         tokenizer.fit_on_texts(test_sentence)
         single_sequence = tokenizer.texts_to_sequences(test_sentence)
         single_padder = pad_sequences(single_sequence, maxlen=max_length, padding=padding_type, truncating=trunc_type)
 
-        # print(single_padder.shape)
-        # print(model.predict(single_padder).shape)
         prediction = print(model.predict(single_padder))
-        """
-        prediction = "prediction"
+
         return prediction
 
     def post(self, resource_id):
