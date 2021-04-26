@@ -5,7 +5,7 @@ http://flask-restplus.readthedocs.io
 
 from datetime import datetime
 from flask import request
-from flask_restplus import Resource
+from flask_restx import Resource
 from flask import jsonify
 import json
 import os
