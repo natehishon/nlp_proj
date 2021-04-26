@@ -97,7 +97,7 @@
                             <b-card v-if="type4" header-html="Recommendation: <img style='display:inline-block' class='emoji-image' src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/279/check-mark-button_2705.png'></img>" class="text-center" header-bg-variant="success"
                                     header-text-variant="white">
                                 <b-card-text>
-<!--                                    I'm sorry, I totally should have done that!-->
+<!--                                    I'm sorry, I totally should have done that! -->
                                     <span>We rate this as negative but pretty sarcastic, proceed with optimism!</span>
 
                                 </b-card-text>
