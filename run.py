@@ -1,4 +1,5 @@
 import werkzeug
+from werkzeug.utils import cached_property
 werkzeug.cached_property = werkzeug.utils.cached_property
 
 import os
