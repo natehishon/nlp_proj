@@ -50,7 +50,6 @@ def getTextOutput(input):
     output = []
     #
     for word in array:
-
         try:
             if float(words[word][0]) < ranges[0]:
                 output.append("<span style=\"background-color:" + colors[0] + "\">" + word + "</span>")
