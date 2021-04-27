@@ -24,3 +24,8 @@ selenium-debug.log
 *.sln
 *security-sgps.py
 *security_backend.py
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
