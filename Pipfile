@@ -8,7 +8,7 @@ gunicorn = "==19.7.1"
 flask-restx = "*"
 python-dotenv = "*"
 flask = "*"
-tensorflow = "*"
+tensorflow-cpu = "*"
 transformers = "*"
 
 [dev-packages]
