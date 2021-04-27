@@ -15,7 +15,6 @@
                                         v-model="form.input"
                                         class="mb-2 ml-2 mr-sm-2 mb-sm-0 sentence-input"
                                         placeholder="try a sentence"
-                                        v-on:keyup.enter="submit()"
                                 ></b-input>
                                 <b-button style="width: 130px;" size="md" @click="submit()" variant="info"
                                           class="go-button">
@@ -166,6 +165,7 @@ export default {
       return null
     },
     submit () {
+      console.log('SUB')
       this.loading = true
       this.response = false
       $backend.postResource(this.form.input)
