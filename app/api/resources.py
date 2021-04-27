@@ -70,7 +70,6 @@ class ResourceOne(Resource):
         model, tokenizer = modelHelpers.loadModelAndTokenizer()
         input = request.json['sentence']
 
-        print(input)
         test_sentence = np.array([input])
 
         max_length = 32

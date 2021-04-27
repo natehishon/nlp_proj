@@ -34,6 +34,8 @@ def getTextOutput(input):
         ranges.append(min + ab * i)
 
 
+    # sort = sorted(words.items(), key=lambda kv: kv[1], reverse=True)
+
     colors = dict()
     colors[0] = "#ffffff"
     colors[1] = "#CCE5FF"
@@ -45,7 +47,7 @@ def getTextOutput(input):
     colors[7] = "#004C99"
     colors[8] = "#003366"
     colors[9] = "#001933"
-    colors[10] = "#000000"
+    colors[10] = "#00000"
 
     output = []
     #
