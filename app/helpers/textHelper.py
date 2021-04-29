@@ -52,16 +52,27 @@ def getTextOutput(input):
 
     keys = list(sort.keys())
 
-    first = (keys[0:1000])
-    second = (keys[1000:2000])
-    third = (keys[2000:3000])
-    fourth = (keys[3000:4000])
-    fifth = (keys[4000:5000])
-    sixth = (keys[5000:6000])
-    seventh = (keys[6000:7000])
-    eighth = (keys[7000:8000])
-    ninth = (keys[8000:9000])
-    tenth = (keys[9000:30350])
+    # first = (keys[0:1000])
+    # second = (keys[1000:2000])
+    # third = (keys[2000:3000])
+    # fourth = (keys[3000:4000])
+    # fifth = (keys[4000:5000])
+    # sixth = (keys[5000:6000])
+    # seventh = (keys[6000:7000])
+    # eighth = (keys[7000:8000])
+    # ninth = (keys[8000:9000])
+    # tenth = (keys[9000:30350])
+
+    first = (keys[0:100])
+    second = (keys[100:200])
+    third = (keys[200:300])
+    fourth = (keys[300:400])
+    fifth = (keys[400:500])
+    sixth = (keys[500:600])
+    seventh = (keys[600:700])
+    eighth = (keys[700:800])
+    ninth = (keys[800:900])
+    tenth = (keys[900:30350])
 
     # try percents
 
@@ -101,7 +112,7 @@ def getTextOutput(input):
             elif word in ninth:
                 output.append("<span style=\"background-color:" + colors[1] + "\">" + word + "</span>")
             elif word in tenth:
-                output.append("<span style=\"background-color:" + colors[0] + "\">" + word + "</span>")
+                output.append("<span style=\"background-color:" + colors[1] + "\">" + word + "</span>")
             else:
                 output.append("<span style=\"background-color:" + colors[0] + "\">" + word + "</span>")
         except:
