@@ -35,35 +35,7 @@ class ResourceOne(Resource):
     """ Unsecure Resource Class: Inherit from Resource """
 
     def get(self, resource_id):
-
-        model, tokenizer = modelHelpers.loadModelAndTokenizer()
-        input = "Sounds like a really useful program"
-
-        test_sentence = np.array([input])
-
-        max_length = 32
-        trunc_type = 'post'
-        padding_type = 'post'
-
-        tokenizer.fit_on_texts(test_sentence)
-        single_sequence = tokenizer.texts_to_sequences(test_sentence)
-        single_padder = pad_sequences(single_sequence, maxlen=max_length, padding=padding_type, truncating=trunc_type)
-
-        prediction = model.predict(single_padder)
-
-        sentiment_analysis = pipeline("sentiment-analysis")
-        sentiment = sentiment_analysis(input)[0]
-
-
-        response = dict()
-
-        sentiment['score'] = str("{:.2%}".format(sentiment['score']))
-
-        response['predict'] = str("{:.2%}".format(prediction[0][0]))
-        response['sentiment'] = sentiment
-        response['sentence'] = textHelper.getTextOutput(input)
-
-        return jsonify(response)
+        return "test"
 
     def post(self, resource_id):
 
@@ -80,6 +52,7 @@ class ResourceOne(Resource):
         single_sequence = tokenizer.texts_to_sequences(test_sentence)
         single_padder = pad_sequences(single_sequence, maxlen=max_length, padding=padding_type, truncating=trunc_type)
 
+        # TODO - SHOW
         prediction = model.predict(single_padder)
 
         sentiment_analysis = pipeline("sentiment-analysis")
@@ -91,7 +64,7 @@ class ResourceOne(Resource):
 
         response['predict'] = str("{:.2%}".format(prediction[0][0]))
         response['sentiment'] = sentiment
-        response['sentence'] = textHelper.getTextOutput(input)
+        response['sentence'] = textHelper.getFeatureSentence(input)
 
         return jsonify(response)
 
